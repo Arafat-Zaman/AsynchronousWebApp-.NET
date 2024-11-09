@@ -1,0 +1,20 @@
+﻿@model List<AsyncWebApp.Models.Post>
+
+<h1>Posts</h1>
+
+@if (Model != null && Model.Count > 0)
+{
+    <ul>
+        @foreach (var post in Model)
+        {
+            <li>
+                <strong>@post.Title</strong><br />
+                <p>@post.Body</p>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Loading posts...</p>
+}
